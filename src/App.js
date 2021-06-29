@@ -28,7 +28,10 @@ const App = () => {
           ></Form>
         </div>
         <div>
-          <TodoList></TodoList>
+          <TodoList 
+            todos={todos}
+            setTodos={setTodos}
+          ></TodoList>
         </div>
       </div>
     </div>

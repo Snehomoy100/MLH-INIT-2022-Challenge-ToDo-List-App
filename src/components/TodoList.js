@@ -1,9 +1,20 @@
 import React from 'react';
 
-const TodoList = () => {
+const TodoList = ({todos, setTodos}) => {
     return (
         <div>
-            ToDo List
+            {todos.map((todo) => {
+                return(
+                <li className="todo-list" key={todo.id}>
+                    <input 
+                        type="text" 
+                        value={todo.title} 
+                        className="list" 
+                        onChange={(event) => event.preventDefault()}>
+                    </input>
+                </li>
+                )
+            })}
         </div>
     )
 };
